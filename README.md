@@ -58,6 +58,15 @@ assets/ip-reference/xiaoliang-ip-reference.png
 outputs/
 ```
 
+生成前，技能会默认参考本地样例库：
+
+```text
+examples/approved/   # 已认可完整封面，默认提取正向规律
+examples/rejected/   # 反例封面，默认提取避雷点
+```
+
+你不需要每次特别说明“参考认可封面”或“避开旧问题”，这是默认流程。
+
 ## 目录结构
 
 ```text
