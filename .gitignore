@@ -1,18 +1,18 @@
-# Local/private production materials for the Xiaoliang cover-picture Skill.
-# Keep directory README files tracked so users know where to place assets.
-xiaoliang-cover-picture/assets/ip-reference/*
-!xiaoliang-cover-picture/assets/ip-reference/README.md
-xiaoliang-cover-picture/assets/references/*
-!xiaoliang-cover-picture/assets/references/README.md
-xiaoliang-cover-picture/examples/*
-!xiaoliang-cover-picture/examples/README.md
-xiaoliang-cover-picture/outputs/covers/*
-!xiaoliang-cover-picture/outputs/covers/README.md
-xiaoliang-cover-picture/scripts/*
-!xiaoliang-cover-picture/scripts/README.md
+# 科技小亮封面配图 Skill 的本地私有材料。
+# 保留目录 README，让用户知道素材、示例、输出和脚本应该放在哪里。
+assets/ip-reference/*
+!assets/ip-reference/README.md
+assets/references/*
+!assets/references/README.md
+examples/*
+!examples/README.md
+outputs/covers/*
+!outputs/covers/README.md
+scripts/*
+!scripts/README.md
 
-# Generated image formats.
-*.png
-*.jpg
-*.jpeg
-*.webp
+# 常见生成图片格式。
+*.[Pp][Nn][Gg]
+*.[Jj][Pp][Gg]
+*.[Jj][Pp][Ee][Gg]
+*.[Ww][Ee][Bb][Pp]

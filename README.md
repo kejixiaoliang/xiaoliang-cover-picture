@@ -1,16 +1,133 @@
-# Xiaoliang Article Picture Workspace
+# 科技小亮封面配图技能
 
-This workspace keeps the Xiaoliang cover-picture Skill in one dedicated folder:
+把技术文章、AI 工具体验、开源项目和产品复盘，转成适合发布的公众号封面和小红书封面。
+
+---
+
+## 这是什么
+
+`xiaoliang-cover-picture` 是一个为「科技小亮」个人 IP 设计的 Codex 技能。
+
+它不是普通的 AI 配图提示词，而是一套封面生产方法：从文章标题、摘要、草稿或 Markdown 中提炼传播钩子，再转化成大标题、人物动作、主题物件、视觉隐喻和平台化构图。
+
+公开仓库只保留可复用的技能源文件和目录占位说明。个人 IP 参考图、历史输出图、文章截图、用户草稿、本地脚本和任何私有素材都不会上传。
+
+## 快速开始
+
+拿到这个仓库后，只需要补一张自己的 IP 参考图，就可以让技能按固定路径读取素材。
+
+### 1. 放入 IP 参考图
+
+把清晰的人物参考图放到：
 
 ```text
-xiaoliang-cover-picture/
+assets/ip-reference/xiaoliang-ip-reference.png
 ```
 
-Use that folder as the working root for the Skill. It contains:
+推荐参考图：
 
-- `SKILL.md` and public reference docs;
-- local-only assets and examples;
-- generated cover outputs;
-- helper scripts.
+| 建议 | 原因 |
+| --- | --- |
+| 正脸或轻微侧脸 | 更容易稳定人物识别度 |
+| 背景干净 | 减少生成时把背景误当成人物特征 |
+| 眼镜、发型、服装清楚 | 帮助 Skill 保留 IP 形象 |
+| 不要用手机遮脸 | 避免封面反复生成手机自拍构图 |
 
-Private production files stay inside `xiaoliang-cover-picture/` and are ignored by Git. The placement folders are tracked with small README files so users know where to put reference images, examples, outputs, and local scripts.
+### 2. 在 Codex 中使用
+
+直接给文章主题、标题、摘要或草稿，例如：
+
+```text
+使用 xiaoliang-cover-picture，基于这篇文章生成公众号封面和小红书封面。
+
+标题：Codex 可以操作 Windows 电脑了
+
+摘要：解释 Codex 的电脑操作能力到底能做什么、普通用户怎么理解它、真实体验中有哪些边界。
+```
+
+技能默认生成两种规格：
+
+| 平台 | 比例 | 方向 |
+| --- | --- | --- |
+| 公众号 | `2.35:1` | 横向宽封面 |
+| 小红书 | `3:4` | 竖向移动端封面 |
+
+生成后的封面建议保存在：
+
+```text
+outputs/covers/
+```
+
+## 目录结构
+
+```text
+.
+├─ README.md
+├─ SKILL.md
+├─ .gitignore
+├─ agents/
+│  └─ openai.yaml
+├─ references/
+│  ├─ cover-style.md
+│  ├─ quality-gate.md
+│  ├─ style-matrix.md
+│  └─ prompt-patterns.md
+├─ assets/
+│  ├─ ip-reference/
+│  │  └─ README.md
+│  └─ references/
+│     └─ README.md
+├─ examples/
+│  └─ README.md
+├─ outputs/
+│  └─ covers/
+│     └─ README.md
+└─ scripts/
+   └─ README.md
+```
+
+| 文件或目录 | 作用 |
+| --- | --- |
+| `SKILL.md` | 技能入口，定义生成流程、提示词要求、人物约束、构图规则和质量门槛。 |
+| `references/cover-style.md` | 封面审美指南，约束标题、人物、场景、颜色、平台构图和最终检查。 |
+| `references/quality-gate.md` | 生成前、提示词、图片验收、重试和交付的检查表。 |
+| `references/style-matrix.md` | 按文章类型选择承诺、物件、动作、场景、平台布局和颜色。 |
+| `references/prompt-patterns.md` | 按文章类型选择视觉隐喻、动作和提示词模板。 |
+| `agents/openai.yaml` | Codex 中展示用的技能元信息和默认提示。 |
+| `assets/ip-reference/README.md` | 提示用户把默认 IP 参考图放在哪里。 |
+| `assets/references/README.md` | 私有参考图板占位目录。 |
+| `examples/README.md` | 私有正反示例占位目录。 |
+| `outputs/covers/README.md` | 最终封面输出目录说明。 |
+| `scripts/README.md` | 本地辅助脚本占位目录。 |
+
+## 视觉原则
+
+| 原则 | 说明 |
+| --- | --- |
+| 标题就是主视觉 | 标题不是角落里的说明文字，而是封面的核心视觉元素之一。标题要压缩成 2-4 行短句，并在手机缩略图里保持可读。 |
+| 一张图一个钩子 | 一张封面只表达一个核心洞察。优先使用一个具体物件和一个明确动作：打开、照亮、拆解、连接、比较、按下按钮、举起结果。 |
+| 创作者本人要稳定 | 人物需要像真实的科技创作者，而不是广告模特、商务图库男、网红脸或动漫角色。可以轻微美化，但不能丢失识别度。 |
+| 平台构图要分开设计 | 公众号横图适合左右张力、前景纵深和大块标题区。小红书竖图适合近景人物、更大的标题、更强的瞬间感。 |
+
+## 本地私有边界
+
+以下内容不要上传：
+
+- 个人 IP 参考照片；
+- 生成后的封面图；
+- 用户文章、草稿、截图或私有输出；
+- 一次性本地脚本；
+- 含有私人路径或私有材料的文件；
+- 来自真实生产工作的示例图片。
+
+这些目录会保留 `README.md` 占位，方便新用户知道文件应该放在哪里；真实图片、输出和本地脚本会被 `.gitignore` 忽略。
+
+## 使用建议
+
+每次生成封面时，先想清楚三个问题：
+
+1. 这篇文章最适合被压缩成哪一句封面标题？
+2. 画面里唯一的核心物件是什么？
+3. 小亮应该用什么动作和这个物件发生关系？
+
+如果答案不清楚，不要急着生成图。先把封面概念收紧，再进入图像生成。

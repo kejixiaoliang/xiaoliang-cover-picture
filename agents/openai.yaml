@@ -1,4 +1,4 @@
 interface:
   display_name: "科技小亮封面配图"
-  short_description: "Generate high-impact Xiaoliang IP article cover images"
+  short_description: "生成有冲击力的科技小亮 IP 文章封面"
   default_prompt: "基于文章内容和科技小亮参考图，直接生成公众号 2.35:1 与小红书 3:4 封面图。两种封面都要优先有张力、有创意、人物形象稳定；每次都要更换人物姿势、手部动作、视角和场景，不要反复使用前倾张手、暗色桌面、发光物体这一套；避免无理由拿手机和平淡办公桌构图。"
