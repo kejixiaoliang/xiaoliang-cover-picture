@@ -8,7 +8,8 @@
 | --- | --- |
 | IP 参考图存在 | `assets/ip-reference/xiaoliang-ip-reference.png` 存在，或用户提供了其他参考图路径。 |
 | 私有素材保持本地 | 参考图、生成封面、文章截图和草稿没有被准备上传到公开仓库。 |
-| 输出路径是本地路径 | 最终封面保存在 `outputs/covers/`，或用户明确指定的其他本地路径。 |
+| 输出路径是本地路径 | 最终封面保存在 `outputs/`，或用户明确指定的其他本地路径。 |
+| 示例库路径清楚 | 已认可完整封面放在 `examples/approved/`；反例封面放在 `examples/rejected/`。 |
 
 如果默认 IP 参考图不存在，在生成前暂停，并提醒用户放置清晰参考图：
 
@@ -55,8 +56,8 @@ assets/ip-reference/xiaoliang-ip-reference.png
 只报告有用的最终路径和必要说明：
 
 ```text
-公众号封面：outputs/covers/<name>-wechat-cover.png
-小红书封面：outputs/covers/<name>-xiaohongshu-cover.png
+公众号封面：outputs/<name>-wechat-cover.png
+小红书封面：outputs/<name>-xiaohongshu-cover.png
 ```
 
 除非用户主动询问，不要报告私有参考图细节。

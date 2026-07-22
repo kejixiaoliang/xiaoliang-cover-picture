@@ -6,8 +6,14 @@ assets/references/*
 !assets/references/README.md
 examples/*
 !examples/README.md
-outputs/covers/*
-!outputs/covers/README.md
+!examples/approved/
+examples/approved/*
+!examples/approved/README.md
+!examples/rejected/
+examples/rejected/*
+!examples/rejected/README.md
+outputs/*
+!outputs/README.md
 scripts/*
 !scripts/README.md
 

@@ -1,11 +1,17 @@
 # 示例封面
 
-把本地正向或反向示例封面放在这里，用来校准审美。
+这里用于存放生成过、检查过的完整封面样例，帮助后续生成时校准审美。
 
-可选审美参考路径：
+推荐分成两类：
 
 ```text
-examples/weread-skill-xiaohongshu-impact-clean.png
+examples/approved/
+examples/rejected/
 ```
 
-真实示例图通常来自生产工作，不要上传。这个 README 只是为了保留目录。
+使用方式：
+
+- `approved/`：放你认可的完整封面，作为后续正向参考。
+- `rejected/`：放不满意但有复盘价值的封面，作为反例。
+
+真实示例图通常来自生产工作，不要上传。目录里的 README 只是为了保留结构。

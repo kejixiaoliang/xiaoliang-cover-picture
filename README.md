@@ -55,7 +55,7 @@ assets/ip-reference/xiaoliang-ip-reference.png
 生成后的封面建议保存在：
 
 ```text
-outputs/covers/
+outputs/
 ```
 
 ## 目录结构
@@ -78,10 +78,13 @@ outputs/covers/
 │  └─ references/
 │     └─ README.md
 ├─ examples/
-│  └─ README.md
-├─ outputs/
-│  └─ covers/
+│  ├─ README.md
+│  ├─ approved/
+│  │  └─ README.md
+│  └─ rejected/
 │     └─ README.md
+├─ outputs/
+│  └─ README.md
 └─ scripts/
    └─ README.md
 ```
@@ -96,8 +99,10 @@ outputs/covers/
 | `agents/openai.yaml` | Codex 中展示用的技能元信息和默认提示。 |
 | `assets/ip-reference/README.md` | 提示用户把默认 IP 参考图放在哪里。 |
 | `assets/references/README.md` | 私有参考图板占位目录。 |
-| `examples/README.md` | 私有正反示例占位目录。 |
-| `outputs/covers/README.md` | 最终封面输出目录说明。 |
+| `examples/README.md` | 私有正反示例的总说明。 |
+| `examples/approved/README.md` | 已认可完整封面的正向样例目录。 |
+| `examples/rejected/README.md` | 不满意但有复盘价值的反例目录。 |
+| `outputs/README.md` | 本次新生成封面的输出目录说明。 |
 | `scripts/README.md` | 本地辅助脚本占位目录。 |
 
 ## 视觉原则
