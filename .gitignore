@@ -1,0 +1,18 @@
+# Local/private production materials for the Xiaoliang cover-picture Skill.
+# Keep directory README files tracked so users know where to place assets.
+xiaoliang-cover-picture/assets/ip-reference/*
+!xiaoliang-cover-picture/assets/ip-reference/README.md
+xiaoliang-cover-picture/assets/references/*
+!xiaoliang-cover-picture/assets/references/README.md
+xiaoliang-cover-picture/examples/*
+!xiaoliang-cover-picture/examples/README.md
+xiaoliang-cover-picture/outputs/covers/*
+!xiaoliang-cover-picture/outputs/covers/README.md
+xiaoliang-cover-picture/scripts/*
+!xiaoliang-cover-picture/scripts/README.md
+
+# Generated image formats.
+*.png
+*.jpg
+*.jpeg
+*.webp
